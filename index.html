@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dla Nikusi</title>
+</head>
+<body>
+    <p id="header">Kliknij słodziaku!!!</p>
+
+    <center>
+        <button onclick="generate()">Kliknij</button><br><br><br><br><br><br>
+        <p id="output"></p>
+        
+        <img src="serduszko.png" alt="">
+    </center>
+</body>
+</html>
+
+<script>
+    let par = document.getElementById("output");
+
+    let teksty = 
+    [
+        "Kocham cię najbardziej na świecie!",
+        "Jesteś moim najdroższym słodziakiem!",
+        "Pamiętaj, by nigdy się nie poddawać!",
+        "Jestem przy tobie na dobre i na złe!",
+        "Kocham i chcę cię taką jaka jesteś!",
+        "Mimo twoich kompleksów jesteś idealna!",
+        "Zawsze możesz na mnie liczyć!",
+        "Nie zapomnij zjeść czegoś dzisiaj!",
+        "Jestem z ciebie dumny że wstałaś z łóżka!",
+        "Walcz dalej!",
+        "Kto jest moim skarbeńkiem??",
+        "BUZIACZKIIIII!!!!",
+        "Przy mnie jesteś bezpieczna!",
+        "Nie dam cię nikomu skrzywdzić!",
+        "Zaopiekuję się tobą!!!",
+        "Akceptuję w tobie wszystko!"
+    ]
+    function generate()
+    {
+        const rndInt = Math.floor(Math.random() * 15) + 0;
+        par.innerHTML = teksty[rndInt];
+    }
+</script>
+
+<style>
+    *
+    {
+        box-sizing: border-box;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #FF00FF;
+        font-weight: lighter;
+    }
+    body
+    {
+        background-color: rgb(53,53,53);
+    }
+    #header
+    {
+        text-align: center;
+        margin: 30px;
+        margin-top: 70px;
+        font-size: 30px;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+    #output
+    {
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        font-size: 20px;
+        margin: 20px;
+    }
+    button
+    {
+        width: 250px;
+        margin-top: 30px;
+        height: 60px;
+        background-color: #000;
+        border: 2px solid #FF00FF;
+        border-radius: 15px;
+    }
+    img
+    {
+        width: 250px;
+        position: fixed;
+        text-align: center;
+        bottom: 50px;
+        left: 80px;
+    }
+</style>
